@@ -11,6 +11,13 @@
 </head>
 <body>
 <main class="main">
+    <input class="slider__input-1" type="radio" id="slider-1" name="slider" aria-hidden="true" hidden=""
+           checked="checked">
+    <input class="slider__input-2" type="radio" id="slider-2" name="slider" aria-hidden="true" hidden="">
+    <input class="slider__input-3" type="radio" id="slider-3" name="slider" aria-hidden="true" hidden="">
+    <input class="slider__input-4" type="radio" id="slider-4" name="slider" aria-hidden="true" hidden="">
+    <input class="slider__input-5" type="radio" id="slider-5" name="slider" aria-hidden="true" hidden="">
+
     <div class="slider">
         <div class="slider__tape">
             <div class="slider__item">
@@ -35,23 +42,24 @@
             </div>
         </div>
     </div>
+
     <div class="controls">
         <div class="text">
             <div class="text-tape">
-                <div class="text-item">Dean says BINGO!</div>
-                <div class="text-item">Crowley says I will smack you stupid!</div>
-                <div class="text-item">Noooooopeeeee!</div>
-                <div class="text-item">You are welcome!</div>
-                <div class="text-item">Kill me.</div>
+                <span class="text-item">Dean says BINGO!</span>
+                <span class="text-item">Crowley says I will smack you stupid!</span>
+                <span class="text-item">Noooooopeeeee!</span>
+                <span class="text-item">You are welcome!</span>
+                <span class="text-item">Kill me.</span>
             </div>
         </div>
-        <div class="bullets">
-            <div class="bullet-container"><span class="bullet-1 bullet"></span></div>
-            <div class="bullet-container"><span class="bullet-2 bullet"></span></div>
-            <div class="bullet-container"><span class="bullet-3 bullet"></span></div>
-            <div class="bullet-container"><span class="bullet-4 bullet"></span></div>
-            <div class="bullet-container"><span class="bullet-5 bullet"></span></div>
-        </div>
+        <ol class="bullets">
+            <li><label for="slider-1" class="bullet-container"><span class="bullet"></span></label></li>
+            <li><label for="slider-2" class="bullet-container"><span class="bullet"></span></label></li>
+            <li><label for="slider-3" class="bullet-container"><span class="bullet"></span></label></li>
+            <li><label for="slider-4" class="bullet-container"><span class="bullet"></span></label></li>
+            <li><label for="slider-5" class="bullet-container"><span class="bullet"></span></label></li>
+        </ol>
     </div>
 
 </main>
