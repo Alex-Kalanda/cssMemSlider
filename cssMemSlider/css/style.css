@@ -4,7 +4,30 @@
     align-items: center;
     background: dimgrey;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
+}
+body {
+    background-color: dimgrey;
+}
+.header {
+    margin: 40px auto 0 auto;
+    width: 70vw;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+}
+.header-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+.header-logo img {
+    width: 100%;
+    height: 100%;
+}
+.header-caption {
+    font-size: 44px;
+    color: #4b0606;
 }
 .slider {
     max-width: 1000px;
@@ -13,7 +36,7 @@
     --slider-width: 70vw;
     height: calc(var(--slider-width) * 0.7375);
     overflow: hidden;
-    margin: 50px auto;
+    margin: 30px auto;
 }
 .slider__tape {
     display: flex;
@@ -21,8 +44,8 @@
     width: calc(var(--slider-width)*5);
     height: 100%;
     margin-left: 0;
-    -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
 }
 .slider__item {
     max-width: 1000px;
@@ -40,6 +63,7 @@
     align-items: center;
     width: 70vw;
     max-width: 1000px;
+    margin-bottom: 50px;
 }
 .bullets {
     display: flex;
@@ -81,13 +105,15 @@
     align-items: center;
     width: calc(100% *5);
     -webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    transition: all 0.3s ease-in;
 }
 .text-item {
     display: inline-block;
     width: 100%;
     font-size: 2.5vw;
     color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
 }
 @media (min-width: 1600px) {
     .text-item {
@@ -110,6 +136,16 @@
 #slider-5:checked ~ .slider .slider__tape {
     margin-left: -400%;
 }
+
+#slider-1:checked ~ .controls .text .text-tape .text-item:nth-child(1),
+#slider-2:checked ~ .controls .text .text-tape .text-item:nth-child(2),
+#slider-3:checked ~ .controls .text .text-tape .text-item:nth-child(3),
+#slider-4:checked ~ .controls .text .text-tape .text-item:nth-child(4),
+#slider-5:checked ~ .controls .text .text-tape .text-item:nth-child(5) {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
 
 #slider-1:checked ~ .controls .text .text-tape {
     margin-left: 0;
@@ -147,6 +183,9 @@
     .text-item {
         font-size: 3vw;
     }
+    .header-caption {
+        font-size: 33px;
+    }
 }
 @media (max-width: 640px) {
     .controls {
@@ -160,6 +199,9 @@
     }
     .text-item {
         font-size: 3.5vw;
+    }
+    .header-caption {
+        font-size: 4.7vw;
     }
 }
 
