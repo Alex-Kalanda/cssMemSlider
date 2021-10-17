@@ -120,6 +120,12 @@ body {
         font-size: 48px;
     }
 }
+@media (min-width: 1420px) {
+    .slider {
+        width: 1000px;
+        height: 739px;
+    }
+}
 
 #slider-1:checked ~ .slider .slider__tape {
     margin-left: 0;
